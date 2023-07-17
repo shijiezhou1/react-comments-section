@@ -3,22 +3,23 @@
 ## Install
 Install the latest version!
 ```bash
-npm i react-comments-section
+npm i @charlesmack34/react-comments-section
 ```
 
+Based off the below package BUT adds gives the ability to add a timestamp to each comment!
 
 ## Detailed Documentation : https://riyanegi.github.io/react-comments-documentation/
 
 
 `react-comments-section` is a simple but multi-functional react comment section component that helps you create comments section similar to youtube or instagram for your React App.
-`react-comments-section` is very useful for react beginners who want a comment section in their project but want to skip it's commplexity. This library will give a fully functional comment section with the following features: 
-  - User can reply to comments  
+`react-comments-section` is very useful for react beginners who want a comment section in their project but want to skip it's commplexity. This library will give a fully functional comment section with the following features:
+  - User can reply to comments
   - User can edit his/her comments
   - User can delete his/her comments
 
 live demo of the library -> https://riyanegi.github.io/react-comments-section/
 
-## Default Example 
+## Default Example
 
 ![commentbox](https://github.com/RiyaNegi/react-comments-section/blob/main/example/blob/default.png?raw=true)
 
@@ -53,6 +54,7 @@ const DefaultComponent = () => {
       userProfile: 'https://www.linkedin.com/in/riya-negi-8879631a9/',
       text: 'I think you have a point🤔',
       avatarUrl: 'https://ui-avatars.com/api/name=Lily&background=random',
+      timestamp: '',
       replies: []
     }
   ]
@@ -79,6 +81,7 @@ const DefaultComponent = () => {
           text: string
           replies: any
           commentId: string
+          timestamp: string
         }) => console.log('check submit, ', data)}
         currentData={(data: any) => {
           console.log('curent data', data)
@@ -107,6 +110,7 @@ class ClassComponent extends PureComponent {
         avatarUrl: 'https://ui-avatars.com/api/name=Riya&background=random',
         userProfile: 'https://www.linkedin.com/in/riya-negi-8879631a9/',
         text: 'Hey, Loved your blog! ',
+        timestamp: '',
         replies: []
       },
       {
@@ -116,6 +120,7 @@ class ClassComponent extends PureComponent {
         userProfile: 'https://www.linkedin.com/in/riya-negi-8879631a9/',
         text: 'I have a doubt about the 4th point🤔',
         avatarUrl: 'https://ui-avatars.com/api/name=Lily&background=random',
+        timestamp: '',
         replies: []
       }
     ]
@@ -128,7 +133,7 @@ class ClassComponent extends PureComponent {
   customNoComment = () => <div className='no-com'>No comments wohoooo!</div>
 
   render() {
-    return 
+    return
         <CommentSection
           currentUser={{
             currentUserId: '01a',
