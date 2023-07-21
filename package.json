@@ -1,6 +1,6 @@
 {
   "name": "@charlesmack34/react-comments-section",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "React component library for a functioning comments section",
   "author": "Charles Mack",
   "license": "MIT",
@@ -17,8 +17,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl-with-assets --css-modules false --no-compress --format modern,cjs",
-    "start": "microbundle-crl-with-assets --css-modules false watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl-postcss8 --css-modules false --no-compress --format modern,cjs && cp -r src/assets dist/",
+    "start": "microbundle-crl-postcss8 --css-modules false watch --no-compress --format modern,cjs && cp -r src/assets dist/",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -44,7 +44,6 @@
     "@types/react-draft-wysiwyg": "^1.13.4",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
-    "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.3",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^6.15.0",
@@ -57,12 +56,11 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-standard": "^4.1.0",
     "gh-pages": "^2.2.0",
-    "microbundle-crl": "^0.13.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^5.0.1",
     "typescript": "^3.9.10"
   },
   "files": [
@@ -73,11 +71,13 @@
     "@szhsin/react-menu": "^3.5.3",
     "@types/lodash": "^4.14.195",
     "@types/uuid": "^8.3.4",
+    "@yfwz100/rollup-plugin-smart-asset": "^2.1.3",
     "draft-js": "^0.11.7",
     "draftjs-to-html": "^0.9.1",
     "emoji-picker-react": "^3.6.5",
+    "fsevents": "^2.3.2",
     "html-to-draftjs": "^1.5.0",
-    "microbundle-crl-with-assets": "^0.13.12",
+    "microbundle-crl-postcss8": "^0.13.11",
     "react-draft-wysiwyg": "^1.15.0",
     "react-responsive-modal": "^6.4.2",
     "sass": "^1.63.6"

@@ -81,7 +81,7 @@
   }
 }
 .replyIcon {
-  background-image: url('../../assets/reply.svg');
+  background-image: url('./assets/reply.svg');
   width: 16px;
   height: 13px;
   filter: invert(67%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(85%)
@@ -90,7 +90,7 @@
   position: absolute;
 }
 .optionIcon {
-  background-image: url('../../assets/options.svg');
+  background-image: url('./assets/options.svg');
   width: 6px;
   height: 6px;
   filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(155deg) brightness(98%)
