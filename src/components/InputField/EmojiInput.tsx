@@ -39,11 +39,14 @@ const EmojiInput = ({ text, setText, mode, inputStyle }: EmojiInputProps) => {
     }
   }, [chosenEmoji])
 
-  const onEmojiClick = (event: any, emojiObject: { emoji?: any }) => {
+  const onEmojiClick = (emojiObject: { emoji?: any }, event: MouseEvent) => {
     event
     setChosenEmoji(emojiObject)
   }
 
+  // @ts-ignore
+  // @ts-ignore
+  // @ts-ignore
   return (
     <div className='emoji-input'>
       <input
