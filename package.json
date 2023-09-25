@@ -1,6 +1,6 @@
 {
   "name": "@charlesmack34/react-comments-section",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React component library for a functioning comments section",
   "author": "Charles Mack",
   "license": "MIT",
@@ -89,5 +89,10 @@
   "homepage": "https://github.com/charlesmack34/react-comments-section#readme",
   "directories": {
     "example": "example"
+  },
+  "overrides": {
+    "microbundle-crl-postcss8": {
+      "nth-check": "2.0.1"
+    }
   }
 }
